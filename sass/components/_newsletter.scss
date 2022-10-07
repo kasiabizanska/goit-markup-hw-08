@@ -1,0 +1,73 @@
+.newsletter {
+  &__conteiner {
+    width: 1200px;
+    margin: 0 auto;
+  }
+  &__title {
+    display: column;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    color: $white;
+    padding-left: 70px;
+    padding-bottom: 20px;
+  }
+
+  &__form {
+    padding: 0 70px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.03em;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: $white;
+
+    &__input {
+      width: 358px;
+      height: 50px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+      border-radius: 4px;
+      background: #2f303a;
+      margin-right: 12px;
+      transition: border $animation;
+      padding: 0 16px;
+      color: $white;
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 16px;
+        letter-spacing: 0.03em;
+      }
+      &:focus {
+        outline: $blue;
+        border: 1px solid $blue;
+      }
+    }
+  }
+  &__button {
+    width: 200px;
+    height: 50px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 0.06em;
+    border-style: hidden;
+    border-radius: 4px;
+    color: $white;
+    background-color: $blue;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: background-color $animation;
+  }
+  &__subscription-icon {
+    padding-left: 10px;
+    fill: $white;
+  }
+}

@@ -1,0 +1,138 @@
+.order {
+  display: flex;
+  width: 100%;
+  padding: 40px;
+  flex-direction: column;
+  color: $header-color;
+  &__header {
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 20px;
+  }
+  &__element {
+    margin-bottom: 10px;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: $grey;
+  }
+  &__wrapper {
+    position: relative;
+  }
+
+  &__frame-decoration {
+    display: block;
+    width: 100%;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    transition: border $animation;
+    &:focus {
+      border: 1px solid $blue;
+      outline: none;
+    }
+  }
+  &__input {
+    min-height: 40px;
+    padding-left: 42px;
+    transition: $animation;
+  }
+  &__icon {
+    position: absolute;
+    top: 13px;
+    left: 12px;
+    width: 13px;
+    height: 13px;
+    fill: currentColor;
+    transition: $animation;
+  }
+  &__input:focus + &__icon {
+    color: $blue;
+  }
+  &__textarea {
+    height: 120px;
+    padding: 12px 16px;
+    resize: none;
+  }
+  &__textarea::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+  &__agreement-element {
+    display: flex;
+    color: $grey;
+    margin-bottom: 30px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    cursor: pointer;
+  }
+  &__agreement-link {
+    margin-left: 5px;
+    color: $blue;
+  }
+
+  &__checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+  &__check-icon {
+    fill: none;
+    margin-right: 7px;
+    border: 2px solid $header-color;
+    border-radius: 2px;
+    outline: none;
+    transition: $animation;
+  }
+
+  &__checkbox:checked + &__check-icon {
+    background-color: $blue;
+    fill: $white;
+    border: none;
+    transition: $animation;
+  }
+
+  &__checkbox:focus-visible + &__check-icon {
+    outline: solid 1pt;
+  }
+
+  &__button {
+    width: 200px;
+    height: 50px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 0.06em;
+    border-style: hidden;
+    border-radius: 4px;
+    color: $white;
+    background-color: $blue;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: background-color $animation;
+    margin: auto;
+  }
+}

@@ -1,0 +1,80 @@
+.team {
+  background-color: #f5f4fa;
+  padding: 94px 0;
+
+  &__container{
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__header {
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $header-color;
+    padding-bottom: 50px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+
+    &__box {
+      background: #ffffff;
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+      border-radius: 0px 0px 4px 4px;
+    }
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $header-color;
+    margin: 30px 0 10px 0;
+  }
+
+  &__departament {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $grey;
+    margin-bottom: 16px;
+  }
+
+  &__socialmedia {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    justify-content: center;
+
+    &__link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__icon {
+      width: 44px;
+      height: 44px;
+      padding: 12px;
+      border-radius: 50%;
+      background-color: $white;
+      fill: #afb1b8;
+      transition: background-color $animation, color $animation;
+      &:hover,
+      :focus {
+        background-color: $blue;
+        fill: $white;
+      }
+    }
+  }
+}

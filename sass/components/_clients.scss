@@ -1,0 +1,45 @@
+.clients {
+  padding: 94px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: $white;
+
+  &__container{
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+
+  &__header {
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $header-color;
+    padding-bottom: 50px;
+  }
+
+  &__list {
+    display: flex;
+    flex-basis: calc(100% / 5 - 150px);
+    gap: 30px;
+    list-style: none;
+  }
+
+  &__icon {
+    height: 92px;
+    width: 170px;
+    border-radius: 4px;
+    color: #afb1b8;
+    border: 1px solid rgba(175, 177, 184, 1);
+    fill: #afb1b8;
+    transition: $animation;
+    &:hover,
+    &:focus {
+      fill: $blue;
+      border-color: $blue;
+    }
+  }
+}
