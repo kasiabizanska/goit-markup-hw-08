@@ -55,14 +55,22 @@
   }
 }
 
-@media screen and (min-width: $screenDesktop){
-  .vision{
-    &__container{
+@media screen and (min-width: $screenDesktop) {
+  .vision {
+    &__container {
       height: 600px;
     }
-    &__header{
+    &__header {
       font-size: 44px;
       line-height: 60px;
     }
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .vision {
+    background-image: $order-gradient, url(../images/order-background@2x.jpg);
   }
 }
