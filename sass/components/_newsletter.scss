@@ -1,33 +1,38 @@
 .newsletter {
   &__conteiner {
-    width: 1200px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
   }
   &__title {
     display: column;
+    text-align: center;
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0.03em;
     color: $white;
-    padding-left: 70px;
     padding-bottom: 20px;
   }
 
   &__form {
-    padding: 0 70px;
     font-weight: 700;
     font-size: 16px;
     line-height: 30px;
     letter-spacing: 0.03em;
     display: flex;
+    flex-direction: column;
     align-items: center;
     text-align: center;
     letter-spacing: 0.06em;
     color: $white;
+    gap: 20px;
 
     &__input {
-      width: 358px;
+      width: 50%;
+      max-width: 450px;
+      min-width: 290px;
       height: 50px;
       border: 1px solid rgba(255, 255, 255, 0.3);
       filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -35,7 +40,7 @@
       background: #2f303a;
       margin-right: 12px;
       transition: border $animation;
-      padding: 0 16px;
+      padding: 15px 16px;
       color: $white;
       &::placeholder {
         color: rgba(255, 255, 255, 0.6);
@@ -69,5 +74,30 @@
   &__subscription-icon {
     padding-left: 10px;
     fill: $white;
+  }
+}
+
+@media screen and (min-width: $screenTablet) {
+  .newsletter {
+    margin: 0px 202px;
+  }
+}
+
+@media screen and (min-width: $screenDesktop) {
+  .newsletter {
+    align-items: flex-start;
+    align-self: flex-start;
+    margin: 0;
+    margin-top: 12px;
+    &__title{
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+    &__form{
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: row;
+    }
   }
 }

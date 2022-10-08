@@ -1,23 +1,135 @@
 .footer {
+  min-width: $MinWidth;
   background: $darkgrey;
   color: $white;
   padding: 60px 0;
-
   &__container {
+    max-width: 1200px;
+    padding: 0 15px;
     display: flex;
-    width: 1200px;
+    flex-direction: column;
     margin: 0 auto;
+    gap: 60px;
   }
 
   &__logo-web {
     font-family: "Raleway";
     font-weight: 700;
-    font-size: 26px;
-    line-height: 31px;
+    font-size: 24px;
+    line-height: 28px;
     letter-spacing: 0.03em;
     color: $blue;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   &__logo-studio {
     color: $white;
+  }
+
+  &__address {
+    color: $white;
+    font-style: normal;
+    padding-top: 20px;
+    font-size: 14px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    &__link {
+      list-style: none;
+      padding-top: 9px;
+      color: $white;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: 0.03em;
+      color: rgba(255, 255, 255, 0.6);
+      transition: $animation;
+
+      &:hover,
+      &:focus {
+        color: $blue;
+      }
+    }
+  }
+
+  &__social {
+    &__paragraph {
+      display: column;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0.03em;
+      color: $white;
+      padding-bottom: 20px;
+      text-align: center;
+    }
+
+    &__list {
+      display: flex;
+      list-style: none;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__icon {
+      height: 44px;
+      width: 44px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.1);
+      fill: $white;
+      transition: $animation;
+      text-align: center;
+
+      &:focus,
+      &:hover {
+        background-color: $blue;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $screenTablet) {
+  .footer {
+    &__container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 51px;
+    }
+  }
+}
+
+@media screen and (min-width: $screenDesktop) {
+  .footer {
+    &__container {
+      gap: 70px;
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+    }
+
+    &__logo-web {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    &__address {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+    &__social {
+      &__paragraph {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
+    }
   }
 }
