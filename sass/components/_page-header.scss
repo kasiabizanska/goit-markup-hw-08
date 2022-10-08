@@ -1,43 +1,53 @@
 .menu {
   margin: 0 auto;
   background: $white;
-  max-width: 1200px;
+  max-width: $screenDesktop;
+  min-width: $MinWidth;
   line-height: 1.19;
   color: $header-color;
-  display: flex;
   border-bottom: solid 1px #ececec;
 
   &__container {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     width: 100%;
     padding: 25px 0;
     align-items: center;
-    width: 1200px;
     margin: 0 auto;
+    height: 60px;
   }
   &__logo-web {
     font-family: "Raleway";
     font-weight: 700;
-    font-size: 26px;
-    line-height: 31px;
+    font-size: 24px;
+    line-height: 28px;
     letter-spacing: 0.03em;
     color: $blue;
+    padding: 0 15px;
+  }
+  &__mobile-icon {
+    background: none;
+    border: none;
+    fill: $header-color;
+    transition: $animation;
   }
 
   &__logo-studio {
     color: $header-color;
     font-family: "Raleway";
     font-weight: 700;
-    font-size: 26px;
-    line-height: 31px;
+    font-size: 24px;
+    line-height: 28px;
     letter-spacing: 0.03em;
+  }
+  &__list {
+    display: none;
   }
 
   &__list-li {
     display: flex;
-    gap: 46px;
-    margin-left: 93px;
+    gap: 60px;
   }
 
   &__list-link {
@@ -68,7 +78,7 @@
   }
 
   &__address {
-    display: flex;
+    display: none;
     gap: 50px;
     align-items: center;
     padding-right: 10px;
@@ -93,6 +103,44 @@
       :focus {
         color: $blue;
       }
+    }
+  }
+}
+
+@media screen and (min-width: $screenTablet) {
+  .menu {
+    &__container {
+      height: 80px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+    &__logo-web {
+      margin-right: 83px;
+    }
+    &__list {
+      display: flex;
+    }
+
+    &__address {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    &__mobile-icon {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: $screenDesktop) {
+  .menu {
+    &__address {
+      flex-direction: row;
+      justify-content: flex-end;
+      gap: 30px;
     }
   }
 }

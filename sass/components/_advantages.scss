@@ -1,20 +1,29 @@
 .advantages {
   padding: 94px 0;
+  margin: 0 auto;
+  align-items: center;
   justify-content: center;
+  max-width: $screenDesktop;
+
   &__container {
-    width: 1200px;
     margin: 0 auto;
+    align-items: center;
+    justify-content: center;
   }
 
   &__list {
+    min-width: $MinWidth;
+    padding: 0 15px;
     display: flex;
-    flex-direction: row;
-    gap: 30px;
+    align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
   }
   &__icon {
     display: flex;
     height: 120px;
+    width: 100%;
     align-items: center;
     justify-content: center;
     background-color: $button-color;
@@ -36,5 +45,21 @@
     line-height: 24px;
     letter-spacing: 0.03em;
     color: $grey;
+  }
+}
+
+@media screen and (min-width: $screenTablet) {
+  .advantages {
+    &__item {
+      flex-basis: calc((100% - 60px) / 2);
+    }
+  }
+}
+
+@media screen and (min-width: $screenDesktop) {
+  .advantages {
+    &__list {
+      flex-wrap: nowrap;
+    }
   }
 }
