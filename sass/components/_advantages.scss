@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   max-width: $screenDesktop;
+  min-width: $MinWidth;
 
   &__container {
     margin: 0 auto;

@@ -1,5 +1,7 @@
 .services {
   display: none;
+  min-width: $MinWidth;
+  max-width: $screenDesktop;
 }
 
 @media screen and (min-width: $screenDesktop) {

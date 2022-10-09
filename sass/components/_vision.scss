@@ -1,25 +1,20 @@
 .vision {
-  max-width: 1600px;
-  min-width: $MinWidth;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
   background-color: $darkgrey;
   background-image: $order-gradient, url(../images/order-background.jpg);
-  background-repeat: no-repeat;
   background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 200px 0;
-  &__conteiner {
-    width: 1200px;
+
+  &__container {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    text-align: center;
     align-items: center;
     justify-content: center;
+    gap: 30px;
+    max-width: 1600px;
+    min-width: $MinWidth;
     height: 400px;
   }
   &__header {
@@ -29,7 +24,6 @@
     text-align: center;
     letter-spacing: 0.06em;
     color: $white;
-    padding: 30px;
   }
   &__button {
     width: 200px;
@@ -44,10 +38,11 @@
     border-radius: 4px;
     border: none;
     padding: 10px 32px;
+    transition: $animation;
     &:hover,
     &:focus {
       color: $white;
-      background-color: $blue;
+      background-color: $grey;
       border: none;
       box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
         0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.15);
@@ -57,9 +52,11 @@
 
 @media screen and (min-width: $screenDesktop) {
   .vision {
+    background-size: cover;
     &__container {
       height: 600px;
     }
+
     &__header {
       font-size: 44px;
       line-height: 60px;
@@ -67,6 +64,11 @@
   }
 }
 
+@media screen and (min-width: 1600px) {
+  .vision {
+    background-size: contain;
+  }
+}
 @media screen and (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {

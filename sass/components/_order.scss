@@ -78,9 +78,15 @@
     line-height: 1.71;
     cursor: pointer;
   }
+
   &__agreement-link {
     margin-left: 5px;
     color: $blue;
+    transition: $animation;
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
   }
 
   &__checkbox {
